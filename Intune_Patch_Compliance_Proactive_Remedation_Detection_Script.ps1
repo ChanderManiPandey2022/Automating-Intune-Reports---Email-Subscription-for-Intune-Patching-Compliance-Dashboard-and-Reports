@@ -237,7 +237,8 @@ IF (!($InstlPatch)) {
 $URI = 'https://aka.ms/Windows11UpdateHistory'
 $CollectedData += (Invoke-WebRequest -Uri $URI -UseBasicParsing -ErrorAction Continue).Links
 #Windows 10 Update HistorY URLWindows 11 URL
-$URI = 'https://aka.ms/WindowsUpdateHistory'
+#$URI = 'https://aka.ms/WindowsUpdateHistory'
+$URI = "https://support.microsoft.com/en-us/help/4043454";
 $CollectedData += (Invoke-WebRequest -Uri $URI -UseBasicParsing -ErrorAction Continue).Links
 
 #$CollectedData | Export-Csv -Path "c:\report.csv" -NoTypeInformation
